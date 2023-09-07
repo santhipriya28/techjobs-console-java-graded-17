@@ -6,6 +6,13 @@ import java.util.Scanner;
 /**
  * Created by LaunchCode
  */
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+
+
 public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
@@ -120,6 +127,19 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        //System.out.println("printJobs is not implemented yet");
+        if(someJobs.isEmpty()) {
+            System.out.print("No Results");
+        }else {
+            for (HashMap<String, String> someJob : someJobs) {
+
+                //System.out.println(someJobs.get(i));
+                System.out.println("\n*****");
+                for (Map.Entry<String, String> row : someJob.entrySet()) {
+                    System.out.println(row.getKey() + ": " + row.getValue());
+                }
+                System.out.println("*****");
+            }
+        }
     }
 }
